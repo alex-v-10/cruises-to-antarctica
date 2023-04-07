@@ -18,35 +18,37 @@
   <div class="wrapper">
     <header class="header">
       <div class="container">
-        <a class="header__logo" href="index.html">
-          <svg width="70" height="38" fill="currentColor" aria-hidden="true" focusable="false">
-            <use xlink:href="img/sprite.svg#logo"></use>
-          </svg>
-        </a>
-        <nav class="header__navigation">
-          <ul>
-            <li>
-              <a href="#">Преимущества</a>
-            </li>
-            <li>
-              <a href="#">Направления</a>
-            </li>
-            <li>
-              <a href="#">Ближайшие круизы</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="header__burger">
-          <svg class="header__burger-icon-open" width="24" height="12" stroke="currentColor" aria-hidden="true" focusable="false">
-            <use xlink:href="img/sprite.svg#burger"></use>
-          </svg>
-          <svg class="header__burger-icon-close" width="13" height="13" stroke="currentColor" aria-hidden="true" focusable="false">
-            <use xlink:href="img/sprite.svg#close"></use>
-          </svg>
-        </button>
+        <div class="header__container is-active" data-burger-container>
+          <a class="header__logo" href="index.html">
+            <svg width="70" height="38" fill="currentColor" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <nav class="header__navigation">
+            <ul>
+              <li>
+                <a href="#">Преимущества</a>
+              </li>
+              <li>
+                <a href="#">Направления</a>
+              </li>
+              <li>
+                <a href="#">Ближайшие круизы</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header__burger" data-burger-button>
+            <svg class="header__burger-icon header__burger-icon--open" width="24" height="12" stroke="currentColor" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#burger"></use>
+            </svg>
+            <svg class="header__burger-icon header__burger-icon--close" width="13" height="13" stroke="currentColor" aria-hidden="true" focusable="false">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
     <main>
