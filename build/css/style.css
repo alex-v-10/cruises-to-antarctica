@@ -1413,11 +1413,12 @@ button,
 }
 
 .card:focus-within caption {
-  left: 25px;
-  top: 28px;
+  left: 0;
+  top: 0;
 }
 
 .card__content {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1447,8 +1448,8 @@ button,
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  bottom: 22px;
-  left: 30px;
+  bottom: -12px;
+  left: 5px;
   z-index: 3;
 }
 
@@ -1764,6 +1765,12 @@ button,
 
 .catalog__list-wrapper {
   padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .catalog__list-wrapper ul {
@@ -1855,6 +1862,19 @@ button,
   .socials svg {
     width: 16px;
     height: 16px;
+  }
+
+  .card {
+    padding: 29px 35px 35px;
+  }
+
+  .card:focus-within caption {
+    left: 0;
+  }
+
+  .card__content caption {
+    left: 0;
+    bottom: -7px;
   }
 
   .header__container {
@@ -1953,7 +1973,22 @@ button,
   }
 
   .catalog {
-    padding: 100px 0 100px;
+    padding: 89px 0 100px;
+  }
+
+  .catalog__title {
+    font-size: 26px;
+  }
+
+  .catalog__list-wrapper ul {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (hover: hover) and (max-width: 1023px) {
+  .card:hover:not(.focus-visible) caption {
+    left: 0;
   }
 }
 
@@ -1999,6 +2034,15 @@ button,
     padding: 10px;
     font-size: 18px;
     line-height: 22px;
+  }
+
+  .card {
+    padding: 28px 25px 35px;
+  }
+
+  .card__content caption {
+    left: 0;
+    bottom: -18px;
   }
 
   .header__container {
@@ -2207,7 +2251,21 @@ button,
   }
 
   .catalog {
-    padding: 65px 0;
+    padding: 56px 0 65px;
+  }
+
+  .catalog__title {
+    margin: 0 0 30px;
+    font-size: 24px;
+  }
+
+  .catalog__list-wrapper {
+    padding: 0 10px;
+  }
+
+  .catalog__list-wrapper ul {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2339,8 +2397,8 @@ button,
   }
 
   .card:hover:not(.focus-visible) caption {
-    left: 25px;
-    top: 28px;
+    left: 0;
+    top: 0;
   }
 
   .header__burger:hover:not(.focus-visible) {
