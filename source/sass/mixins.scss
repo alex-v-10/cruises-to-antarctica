@@ -138,7 +138,6 @@
   @include hover-focus {
     background-color: $color-neon-blue;
     box-shadow: 0 0 10px $color-neon-blue;
-    // border-radius: 3px;
     opacity: 1;
 
     &:active {
@@ -149,7 +148,16 @@
   &:active {
     background-color: $color-neon-blue;
     box-shadow: 0 0 10px $color-neon-blue;
-    // border-radius: 3px;
     opacity: 0.6;
+  }
+}
+
+@mixin interactive--color-white {
+  @include hover-focus {
+    color: $color-default-white;
+  }
+
+  &:active {
+    color: $color-default-white;
   }
 }

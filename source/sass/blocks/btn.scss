@@ -1,14 +1,14 @@
 .btn {
-  display: inline-flex;
+  display: block;
+  text-align: center;
   padding: 10px 20px;
+  font-weight: 600;
 
-  color: $color-default-white;
+  color: $color-default-black;
 
-  background-color: $color-neon-blue;
+  background-color: $color-default-white;
   border: none;
   cursor: pointer;
-
-  transition: opacity $trans-default;
 
   &--red {
     background-color: $color-torch-red;
@@ -20,7 +20,6 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
-  }
+  @include interactive-1;
+  @include interactive--color-white;
 }

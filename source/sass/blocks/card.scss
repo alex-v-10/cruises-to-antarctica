@@ -1,0 +1,96 @@
+.card {
+  position: relative;
+  padding: 28px 25px 35px;
+  background-color: $color-default-black;
+  color: $color-default-white;
+
+  @mixin remove-background {
+    .card__background {
+      display: none;
+    }
+
+    caption {
+      left: 25px;
+      top: 28px;
+    }
+  }
+
+  @include hover {
+    @include remove-background;
+  }
+
+  &:focus-within {
+    @include remove-background;
+  }
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  table {
+    margin: 0 0 25px;
+    padding: 38px 0 0;
+    flex: 1 1 auto;
+  }
+
+  caption {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    bottom: 22px;
+    left: 30px;
+    z-index: 3;
+  }
+
+  tr {
+    margin: 0 -2px 12px;
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  th {
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  td {
+    padding: 0;
+    color: $quartz;
+  }
+
+  a {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: auto 0 0;
+    justify-self: flex-end;
+  }
+}
+
+.card__background {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

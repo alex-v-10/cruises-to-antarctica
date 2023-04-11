@@ -1,26 +1,29 @@
 .intro {
-  height: 650px;
+  min-height: 650px;
   position: relative;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   background-color: $lochmara;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @include vp-1023 {
-    height: 638px;
+    min-height: 638px;
     box-shadow: none;
   }
 
   @include vp-767 {
-    height: 500px;
+    min-height: 500px;
   }
 }
 
-.intro__container {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .intro__container {
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 .intro__background {
   width: 100%;
@@ -40,11 +43,20 @@
 }
 
 .intro__text {
+  padding: 200px 0 200px 95px;
   position: relative;
   z-index: 1;
   flex: 0 1 970px;
   color: $color-default-white;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include vp-1023 {
+    padding: 200px 0;
+  }
+
+  @include vp-767 {
+    padding: 100px 0;
+  }
 }
 
 .intro__title {
