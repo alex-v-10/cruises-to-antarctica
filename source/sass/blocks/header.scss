@@ -39,6 +39,10 @@
   }
 
   @include interactive-1;
+
+  .header__container.no-js & {
+    display: none;
+  }
 }
 
 .header__burger-icon {

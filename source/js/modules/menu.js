@@ -4,9 +4,9 @@ const burgerContainer = document.querySelector('[data-burger-container]');
 const burgerButton = document.querySelector('[data-burger-button]');
 const scrollLock = new ScrollLock();
 
-const initMenuBurger = () => {
+const initMenu = () => {
   if (burgerContainer && burgerButton) {
-    burgerContainer.classList.remove('is-active');
+    burgerContainer.classList.remove('no-js', 'is-active');
 
     burgerButton.addEventListener('click', () => {
       burgerContainer.classList.toggle('is-active');
@@ -20,4 +20,4 @@ const initMenuBurger = () => {
   }
 };
 
-export {initMenuBurger};
+export {initMenu};

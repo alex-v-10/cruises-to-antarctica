@@ -18,7 +18,7 @@
   <div class="wrapper">
     <header class="header">
       <div class="container">
-        <div class="header__container is-active" data-burger-container>
+        <div class="header__container is-active no-js" data-burger-container>
           <a class="header__logo logo" href="index.html" aria-label="Логотип сайта Круизы в Антарктику">
             <svg width="70" height="38" fill="currentColor" aria-hidden="true" focusable="false">
               <use xlink:href="img/sprite.svg#logo"></use>
@@ -134,7 +134,7 @@
           <div class="catalog__list-wrapper">
             <ul>
               <li>
-                <div class="catalog__card card" tabindex="0">
+                <div class="catalog__card card">
                   <div class="card__content">
                     <div class="card__table-wrapper">
                       <table>
@@ -170,7 +170,7 @@
                 </div>
               </li>
               <li>
-                <div class="catalog__card card" tabindex="0">
+                <div class="catalog__card card">
                   <div class="card__content">
                     <div class="card__table-wrapper">
                       <table>
@@ -206,7 +206,7 @@
                 </div>
               </li>
               <li>
-                <div class="catalog__card card" tabindex="0">
+                <div class="catalog__card card">
                   <div class="card__content">
                     <div class="card__table-wrapper">
                       <table>
@@ -242,7 +242,7 @@
                 </div>
               </li>
               <li>
-                <div class="catalog__card card" tabindex="0">
+                <div class="catalog__card card">
                   <div class="card__content">
                     <div class="card__table-wrapper">
                       <table>
@@ -278,7 +278,7 @@
                 </div>
               </li>
               <li>
-                <div class="catalog__card card" tabindex="0">
+                <div class="catalog__card card">
                   <div class="card__content">
                     <div class="card__table-wrapper">
                       <table>
@@ -314,7 +314,7 @@
                 </div>
               </li>
               <li>
-                <div class="catalog__card card" tabindex="0">
+                <div class="catalog__card card">
                   <div class="card__content">
                     <div class="card__table-wrapper">
                       <table>
@@ -350,7 +350,7 @@
                 </div>
               </li>
               <li>
-                <div class="catalog__card card" tabindex="0">
+                <div class="catalog__card card">
                   <div class="card__content">
                     <div class="card__table-wrapper">
                       <table>
@@ -386,7 +386,7 @@
                 </div>
               </li>
               <li>
-                <div class="catalog__card card" tabindex="0">
+                <div class="catalog__card card">
                   <div class="card__content">
                     <div class="card__table-wrapper">
                       <table>
@@ -441,28 +441,35 @@
                 <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
               </div>
               <div class="booking__form-wrapper">
-                <div class="booking__form form">
+                <div class="booking__form form" data-form-validate data-callback="base">
                   <h3 class="form__title">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время
                   </h3>
                   <form action="https://echo.htmlacademy.ru/" method="post">
-                    <div class="form__item custom-input">
+                    <div class="form__item custom-input" data-validate-type="text"
+                      data-message-base="Поле обязательно к заполнению" data-limitation="name"
+                      data-message-extra="Проверьте корректность заполнения поля" data-required>
                       <label>
-                        <input type="text" name="name" id="name" placeholder="Имя" aria-label="Имя">
+                        <input type="text" name="name" id="name" placeholder="Имя" aria-label="Имя" required>
                       </label>
                     </div>
-                    <div class="form__item custom-input">
+                    <div class="form__item custom-input" data-validate-type="phone"
+                      data-message-base="Поле обязательно к заполнению"
+                      data-message-extra="Проверьте корректность заполнения поля" data-required>
                       <label>
-                        <input type="tel" name="phone" id="phone" placeholder="Телефон" aria-label="Телефон">
+                        <input type="tel" name="phone" id="phone" placeholder="Телефон" aria-label="Телефон" required>
                       </label>
                     </div>
-                    <div class="form__item custom-input">
+                    <div class="form__item custom-input" data-validate-type="email"
+                      data-message-base="Поле обязательно к заполнению"
+                      data-message-extra="Проверьте корректность заполнения поля" data-required>
                       <label>
-                        <input type="email" name="email" id="email" placeholder="Email" aria-label="Email">
+                        <input type="email" name="email" id="email" placeholder="Email" aria-label="Email" required>
                       </label>
                     </div>
-                    <div class="form__item custom-toggle custom-toggle--checkbox">
+                    <div class="form__item custom-toggle custom-toggle--checkbox" data-validate-type="checkbox"
+                      data-required>
                       <label>
-                        <input type="checkbox" name="agree" id="agree">
+                        <input type="checkbox" name="agree" id="agree" checked required>
                         <span class="custom-toggle__icon"></span>
                         <span>Я&nbsp;согласен на&nbsp;обработку моих&nbsp;персональных&nbsp;данных</span>
                       </label>

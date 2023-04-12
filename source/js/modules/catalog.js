@@ -3,6 +3,7 @@ const cards = document.querySelectorAll('.card');
 const initCards = () => {
   if (cards) {
     for (const card of cards) {
+      card.tabIndex = 0;
       const caption = card.querySelector('caption');
       const cardBg = card.querySelector('.card__background');
       if (caption && cardBg) {

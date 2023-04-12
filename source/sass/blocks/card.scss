@@ -33,12 +33,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100%;
 }
 
 .card__table-wrapper {
-  margin: 0 0 2px;
-  flex: 1 0 280px;
+  margin: 0 0 5px;
 
   caption {
     font-weight: 500;
@@ -96,6 +96,10 @@
     height: 100%;
     object-fit: cover;
   }
+
+  .catalog.no-js & {
+    display: none;
+  }
 }
 
 .card__background-title {
@@ -118,11 +122,5 @@
   @include vp-767 {
     bottom: 17px;
     left: 25px;
-  }
-}
-
-.catalog.no-js {
-  .card__background {
-    display: none;
   }
 }

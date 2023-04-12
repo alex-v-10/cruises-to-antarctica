@@ -145,12 +145,18 @@
     label span {
       color: #ff1553;
     }
+
+    .custom-toggle__icon {
+      border: 2px solid $color-torch-red;
+    }
   }
 
   .input-message {
     position: absolute;
-    right: 0;
-    bottom: -5px;
+    left: 0;
+    bottom: 15px;
+    font-size: 12px;
+    line-height: 12px;
 
     &.is-invalid {
       color: #ff0000;
