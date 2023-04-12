@@ -24,6 +24,12 @@
   margin: 0 100px 0 0;
 }
 
+.header__navigation {
+  @include vp-767 {
+    display: none;
+  }
+}
+
 .header__burger {
   margin: 0 -10px 0 0;
   display: none;
@@ -58,12 +64,6 @@
 
 //Menu-burger active
 @include vp-767 {
-  [data-burger-container] {
-    .header__navigation {
-      display: none;
-    }
-  }
-
   [data-burger-container].is-active {
     height: 100vh;
     overflow-y: auto;
@@ -83,13 +83,7 @@
       justify-self: flex-start;
       margin: 0 0 0 15px;
 
-      @include hover-focus {
-        color: $color-default-white;
-      }
-
-      &:active {
-        color: $color-default-white;
-      }
+      @include interactive--color-white;
     }
 
     .header__navigation {
@@ -101,13 +95,7 @@
       align-self: flex-start;
 
       a {
-        @include hover-focus {
-          color: $color-default-white;
-        }
-
-        &:active {
-          color: $color-default-white;
-        }
+        @include interactive--color-white;
       }
     }
 
@@ -116,13 +104,7 @@
       justify-self: flex-end;
       margin: 0;
 
-      @include hover-focus {
-        color: $color-default-white;
-      }
-
-      &:active {
-        color: $color-default-white;
-      }
+      @include interactive--color-white;
     }
 
     .header__burger-icon--close {

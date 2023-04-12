@@ -6,7 +6,7 @@ const scrollLock = new ScrollLock();
 
 const initMenu = () => {
   if (burgerContainer && burgerButton) {
-    burgerContainer.classList.remove('no-js', 'is-active');
+    burgerContainer.classList.remove('is-active');
 
     burgerButton.addEventListener('click', () => {
       burgerContainer.classList.toggle('is-active');

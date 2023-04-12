@@ -18,13 +18,6 @@
   }
 }
 
-// .intro__container {
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
 .intro__background {
   width: 100%;
   height: 100%;
@@ -46,7 +39,6 @@
   padding: 200px 0 200px 95px;
   position: relative;
   z-index: 1;
-  flex: 0 1 970px;
   color: $color-default-white;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
