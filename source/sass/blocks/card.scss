@@ -1,6 +1,8 @@
 .card {
   position: relative;
   padding: 28px 25px 35px;
+  min-height: 386px;
+  height: 100%;
   background-color: $color-default-black;
   color: $color-default-white;
 
@@ -15,11 +17,6 @@
   @mixin remove-background {
     .card__background {
       display: none;
-    }
-
-    caption {
-      left: 0;
-      top: 0;
     }
   }
 
@@ -37,32 +34,21 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+}
 
-  table {
-    margin: 0 0 25px;
-    padding: 38px 0 0;
-    flex: 1 1 auto;
-  }
+.card__table-wrapper {
+  margin: 0 0 2px;
+  flex: 1 0 280px;
 
   caption {
     font-weight: 500;
     font-size: 18px;
     line-height: 150%;
-
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    bottom: -12px;
-    left: 5px;
-    z-index: 3;
-
-    @include vp-1023 {
-      left: 0;
-      bottom: -7px;
-    }
+    margin: 0 0 12px;
+    text-align: start;
 
     @include vp-767 {
-      bottom: -18px;
+      margin: 0 0 13px;
     }
   }
 
@@ -94,7 +80,6 @@
     z-index: 1;
     width: 100%;
     margin: auto 0 0;
-    justify-self: flex-end;
   }
 }
 
@@ -110,5 +95,34 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.card__background-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  bottom: 23px;
+  left: 30px;
+  z-index: 3;
+
+  @include vp-1023 {
+    bottom: 28px;
+    left: 35px;
+  }
+
+  @include vp-767 {
+    bottom: 17px;
+    left: 25px;
+  }
+}
+
+.catalog.no-js {
+  .card__background {
+    display: none;
   }
 }

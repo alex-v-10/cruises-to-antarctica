@@ -16,6 +16,8 @@
   width: 30px;
   height: 30px;
   position: relative;
+
+  @include interactive-1;
 }
 
 .socials svg {
