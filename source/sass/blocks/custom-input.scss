@@ -3,12 +3,11 @@
   position: relative;
 
   display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
+  // width: 530px;
+  padding: 0 0 20px;
 
   @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
-    width: 100%;
+    padding: 0 0 20px;
   }
 
   label {
@@ -24,16 +23,24 @@
     input,
     textarea {
       flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
+      // width: 100%;
+      // max-width: 300px;
+      height: 43px;
       margin-left: auto;
-      padding: 10px;
+      padding: 10px 14px;
+      font-size: 14px;
+      line-height: 150%;
+      background-color: $color-default-white;
 
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
+      &::placeholder {
+        opacity: 0.7;
+      }
+
+      border: 2px solid $color-default-white;
+      // border-radius: 5px;
       outline: none;
 
-      transition: border 0.3s ease;
+      transition: border 0.3s ease, outline 0.1s ease;
 
       @media screen and (max-width: 767px) {
         max-width: unset;
@@ -41,11 +48,13 @@
       }
 
       &:hover {
-        border: 2px solid rgba(#000000, 0.5);
+        border: 2px solid rgba($color-default-black, 0.5);
+        outline: 1px solid $color-default-white;
       }
 
       &:focus {
-        border: 2px solid rgba(#000000, 0.8);
+        border: 2px solid rgba($color-default-black, 0.8);
+        outline: 1px solid $color-default-white;
       }
     }
   }
