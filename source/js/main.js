@@ -3,7 +3,7 @@ import {Form} from './modules/form-validate/form';
 import {initMenu} from './modules/menu';
 import {initCards} from './modules/cards';
 import {initNoJs} from './modules/no-js';
-import {initMap} from './modules/map';
+import {initMap} from './modules/map/map';
 
 // ---------------------------------
 

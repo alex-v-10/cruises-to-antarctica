@@ -3,7 +3,6 @@
   position: relative;
 
   display: flex;
-  // width: 530px;
   padding: 0 0 20px;
 
   @media screen and (max-width: 767px) {
@@ -23,8 +22,6 @@
     input,
     textarea {
       flex-grow: 1;
-      // width: 100%;
-      // max-width: 300px;
       height: 43px;
       margin-left: auto;
       padding: 10px 14px;
@@ -37,7 +34,6 @@
       }
 
       border: 2px solid $color-default-white;
-      // border-radius: 5px;
       outline: none;
 
       transition: border 0.3s ease, outline 0.1s ease;

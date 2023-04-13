@@ -62,10 +62,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    @include vp-767 {
-      object-position: bottom;
-    }
   }
 }
 
