@@ -3,6 +3,7 @@ import {Form} from './modules/form-validate/form';
 import {initMenu} from './modules/menu';
 import {initCards} from './modules/cards';
 import {initNoJs} from './modules/no-js';
+import {initMap} from './modules/map';
 
 // ---------------------------------
 
@@ -25,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    initMap();
   });
 });
 
