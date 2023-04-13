@@ -21,6 +21,7 @@
 }
 
 .contacts__map {
+  position: relative;
   margin: 0 100px 0 0;
   width: 48.3%;
   height: 306px;
@@ -44,15 +45,12 @@
 .contacts__map-container {
   width: 100%;
   height: 100%;
-  background: $color-default-black;
-
-  .contacts__map.no-js & {
-    display: none;
-  }
 }
 
 .contacts__map-image {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 
@@ -64,10 +62,6 @@
     @include vp-767 {
       object-position: bottom;
     }
-  }
-
-  .contacts__map.no-js & {
-    display: block;
   }
 }
 
