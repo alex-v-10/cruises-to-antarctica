@@ -84,3 +84,18 @@
     font-size: 16px;
   }
 }
+
+.intro.no-js {
+  @include vp-767 {
+    .intro__background::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color-default-black, 0.5);
+    }
+  }
+}

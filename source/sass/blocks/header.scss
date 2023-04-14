@@ -129,15 +129,14 @@
 }
 
 .header.no-js {
-  position: relative;
+  @include vp-767 {
+    .header__burger {
+      display: none;
+    }
 
-  .header__burger {
-    display: none;
-  }
-
-  .header__container {
-    width: 100%;
-    height: fit-content;
-    position: relative;
+    .header__container {
+      width: 80%;
+      min-width: auto;
+    }
   }
 }
