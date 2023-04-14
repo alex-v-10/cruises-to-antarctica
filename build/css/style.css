@@ -2216,7 +2216,8 @@ button,
   }
 
   .intro__background img {
-    height: 115%;
+    -o-object-position: bottom 30% left 50%;
+    object-position: bottom 30% left 50%;
   }
 
   .intro__text {
