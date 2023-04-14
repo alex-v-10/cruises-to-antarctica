@@ -1400,22 +1400,6 @@ button,
   display: none;
 }
 
-.header.no-js {
-  position: relative;
-}
-
-.header.no-js .header__burger {
-  display: none;
-}
-
-.header.no-js .header__container {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-
 .footer {
   background-color: #011c40;
   color: #f9fbfd;
@@ -2184,6 +2168,15 @@ button,
     background-color: rgba(1, 28, 64, 0.5);
   }
 
+  .header.no-js .header__burger {
+    display: none;
+  }
+
+  .header.no-js .header__container {
+    width: 80%;
+    min-width: auto;
+  }
+
   .footer__container {
     padding: 31px 0;
     -webkit-box-orient: vertical;
@@ -2238,6 +2231,17 @@ button,
 
   .intro__text p {
     font-size: 16px;
+  }
+
+  .intro.no-js .intro__background::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 28, 64, 0.5);
   }
 
   .travel {
