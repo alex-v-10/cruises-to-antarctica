@@ -1,17 +1,32 @@
 .card {
   position: relative;
-  padding: 28px 25px 35px;
-  min-height: 386px;
-  height: 100%;
+  padding: 28px 24px 35px;
+  height: 386px;
   background-color: $color-default-black;
   color: $color-default-white;
 
+  @include vp-1365 {
+    padding: 2vw 1.75vw 2.5vw;
+    height: 28.2vw;
+  }
+
+  @media (max-width: 1120px) {
+    padding: 22.4px 19.6px 28px;
+    height: 315px;
+  }
+
   @include vp-1023 {
-    padding: 29px 35px 35px;
+    padding: 29px 34px 35px;
+    height: 50.26vw;
   }
 
   @include vp-767 {
-    padding: 28px 25px 35px;
+    padding: 28px 24px 35px;
+    height: 480px;
+  }
+
+  @media (max-width: 400px) {
+    height: 120.6vw;
   }
 
   @mixin remove-background {
@@ -38,7 +53,31 @@
 }
 
 .card__table-wrapper {
-  margin: 0 0 5px;
+  margin: 0 0 15px;
+  height: 100%;
+  overflow-y: auto;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $color-default-black;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 3px solid $color-default-black; /* should match background, can't be transparent */
+    background-color: $color-default-white;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $color-neon-blue;
+  }
 
   caption {
     font-weight: 500;
@@ -53,7 +92,7 @@
   }
 
   tr {
-    margin: 0 -2px 12px;
+    margin: 0 0 12px;
     display: flex;
     flex-direction: column;
 
@@ -113,6 +152,11 @@
   bottom: 23px;
   left: 30px;
   z-index: 3;
+  max-width: 80%;
+
+  @include vp-1365 {
+    left: 10%;
+  }
 
   @include vp-1023 {
     bottom: 28px;

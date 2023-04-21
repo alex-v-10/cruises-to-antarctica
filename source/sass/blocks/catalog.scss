@@ -46,12 +46,18 @@
     gap: 30px;
     justify-content: center;
 
+    @include vp-1365 {
+      gap: 2.2vw;
+    }
+
     @include vp-1023 {
+      gap: 30px;
       grid-template-columns: repeat(2, 1fr);
     }
 
     @include vp-767 {
       grid-template-columns: 1fr;
+      max-width: 350px;
     }
   }
 }

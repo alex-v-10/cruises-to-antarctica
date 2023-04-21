@@ -9,6 +9,7 @@
   background-color: $color-default-white;
   border: none;
   cursor: pointer;
+  user-select: none;
 
   &--red {
     background-color: $color-torch-red;
