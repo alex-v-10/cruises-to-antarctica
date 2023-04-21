@@ -1836,13 +1836,6 @@ button,
   }
 }
 
-@media (max-width: 1120px) {
-  .card {
-    padding: 22.4px 19.6px 28px;
-    height: 315px;
-  }
-}
-
 @media (max-width: 1023px) {
   .container {
     padding: 0 45px;

@@ -10,11 +10,6 @@
     height: 28.2vw;
   }
 
-  @media (max-width: 1120px) {
-    padding: 22.4px 19.6px 28px;
-    height: 315px;
-  }
-
   @include vp-1023 {
     padding: 29px 34px 35px;
     height: 50.26vw;
