@@ -4,7 +4,7 @@
 
 ## Описание  
 * Html, scss  
-* Js
+* Js  
 &nbsp;- мобильное меню  
 &nbsp;- валидация формы  
 &nbsp;- карта (yandex maps api)  
